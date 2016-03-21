@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Theme by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>iPhone Photo Slider (Rotated)</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Ashkan Yousefpour's publications" />
+		<meta name="keywords" content="Ashkan Yousefpour, Ashkan, Yousefpour, ieee, UTD, UTDallas, Amirkabir, AUT, Wireless, Network, Security, IoT, Internet, DoS, DDoS, Wireless Network, Wireless Networks Lab, Research, RA, TA, Teach, Teaching, Researching, Computer, Computer Science, Erik Jonsson, Internet of Things, distributed, gateway6, IPv6, Web, design, web development, cisco, ccna, ccnp, unix, linux" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+        
+        <style>
+
+        .slideshow{
+            margin:0 auto;
+            height:inherit;
+            overflow: hidden;
+            position: relative;           
+            z-index: 1;
+            
+        }
+           .iphoner{
+                margin:0 auto;
+                width: auto;
+     
+                background-size: contain;
+                background-position: center; 
+                background-repeat: no-repeat;
+                position: relative;
+                z-index: 2;
+                max-width: 665px;
+                height: 330px;
+                background-image: url(images/iphoner.png);
+            }
+            
+            .ssiphoner{
+                left: -1%;
+                max-width: 69%;
+                top: 11%;
+            }
+            
+            img {
+                width: 100%;
+                height: auto;
+                position:absolute; 
+            }
+         
+            .arrow{
+               position: absolute;
+                bottom: 40%;
+                width: 4%; 
+                
+            }
+            .arrow a{
+                border-bottom: none !important;
+                cursor: pointer;
+            }
+            
+            
+             .arrowSmallWidth{
+                width: 8% !important;  
+            }
+            
+            
+            .left{           
+                left: 0;  
+            }
+            
+            .right{           
+                right: 0;
+            }
+             .leftout{           
+                left: -25px;               
+            }
+            
+            .rightout{           
+                right: -25px;
+            }
+            
+            .caption{
+                margin: 0 auto;
+                width: auto;
+                max-width: 900px;
+                height: 100px;
+                overflow: hidden;
+                text-align: center;
+            }
+            .caption p{
+                font-size: 16px;
+            }
+            P{
+                font-size: 16px;
+            }
+       
+        </style>
+        <script src="js/slideshow.js"></script>
+        <script type="text/javascript">
+            
+            function start(){
+                init('3');
+                $( window ).resize(function() {resizeScreen();});
+                $( window ).resize();
+                $('#tog').slideToggle(1);
+            }
+
+            $(document).ready(start);          
+            
+        </script>
+        
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- One -->
+			<section id="five" class="main style1">
+               <div class="container">
+                
+                 <header>
+                <h4>iPhone Photo Slider (Rotated)</h4>
+                
+                   </header> 
+                   
+                   <div id="iphone3" class="iphoner">
+        <div id="left3" class="arrow leftout"> <a onclick="clickSlide(false,'3');" ><img src="images/left.png"/></a> </div>
+                <div id="slideshow3" class="slideshow ssiphoner">
+                    
+       
+            <img src="images/i1r.jpg" alt="photo1"/>
+                    <img src="images/i2r.jpg" alt="photo2"/>
+                     <img src="images/i3r.jpg" alt="photo3"/>
+                    <img src="images/i4r.jpg" alt="photo4"/>
+
+
+    </div>
+                    
+                    <div id="right3" class="arrow rightout"><a onclick="clickSlide(true,'3');"><img src="images/right.png"/></a> </div>
+                    </div>
+                
+                <div id="caption3" class="caption">
+                     <p>Image description 1</p>
+                <p>Please fill this space with image description</p>
+                    <p>Your text goes here...</p>
+                <p>Sample text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet ante non ante placerat ullamcorper. Mauris non aliquet massa. Integer vestibulum augue urna.</p>
+                </div>
+      <header>
+                <h4>How to use</h4> 
+                
+                   </header> 
+                   <p>Simply copy the HTML & CSS from this file and paste it in your web page. The HTML code starts from <code>&lt;h4&gt;iPhone Photo Slider (Rotated)&lt;/h4&gt;</code> and ends at the second to the last <code>&lt;/div&gt;</code>. Make sure you copy the internal CSS in this file to your web page. The Javascript functions are defined in slideshow.js. Make sure you load slideshow.js and of course jquery.min.js!</p>
+                 
+                   <h5 onclick="$('#tog').slideToggle(1000);" style="cursor: pointer; border: 1px dashed;">Closer Look (click here)</h5>
+                   <div id="tog" >  
+                   <p>If you look at the source code, you will notice the number "3" in front of some ids, for example <code>id="left3"</code> or <code>onclick="clickSlide(false,'3');"</code>. If you want to change the ids to something else, you could change this number to whatever number you like (let's call it "x"), and make sure you call the <code>init('x')</code> function when the document is "ready" like this:</p>
+                   <pre><code>function start(){ 
+    init('x'); 
+    //more functions...
+} 
+$(document).ready(start);</code></pre>
+                   
+                    <h5>Change even more?</h5>
+                   
+                   <p>If you want to replace the pictures (like iPhone) with other pictures (like Android phone, or tablet), or if you want to make changes to the structure of the code, you should change the scale numbers in CSS; for example <code>max-width: 1000px</code> or <code>height: 625px</code> are defined for a 1000x625 picture.</p>
+                   <p>If you add a new slideshow with arbitrary class name, make sure you add the respective "resize" function in the slideshow.js, to resize it when screen size changes (for a responsive design). The function below shows a "resize" function for a MacBook Image Slider:</p>
+<pre><code>for (var i = 0; i < $('.mac').length ; i++){ // resize mac when screen is being resized
+    var w = $('.mac').eq(i).width(); // "mac" is the class name of the "div" that contains the MacBook Image Slider
+    $('.mac').eq(i).height(0.625 * w); // Mac image ratio is 1000x625, or 1 to 0.625
+}</code></pre>
+                          <p>For responsive design one needs to call the following two functions when the page is "ready" (e.g. in the function "start()" mentioned above): </p>
+                   <pre><code>$(window).resize(function() {resizeScreen();});
+$(window).resize();</code></pre>
+               </div>   
+                                
+                   
+</div>
+                </section>
+        
+
+	</body>
+</html>
